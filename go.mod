@@ -1,4 +1,4 @@
-module github.com/RangelReale/debefix-mongodb
+module github.com/rrgmc/debefix-mongodb
 
 go 1.21.1
 
