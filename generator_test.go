@@ -14,20 +14,21 @@ import (
 func TestGenerate(t *testing.T) {
 	providerData := fstest.MapFS{
 		"users.dbf.yaml": &fstest.MapFile{
-			Data: []byte(`tags:
-  config:
-    table_name: "public.tags"
-  rows:
-    - _id: !dbfexpr generated
-      tag_name: "All"
-      config:
-        !dbfconfig
-        refid: "all"
-    - _id: !dbfexpr generated
-      tag_name: "Half"
-      config:
-        !dbfconfig
-        refid: "half"
+			Data: []byte(`tables:
+  tags:
+    config:
+      table_name: "public.tags"
+    rows:
+      - _id: !dbfexpr generated
+        tag_name: "All"
+        config:
+          !dbfconfig
+          refid: "all"
+      - _id: !dbfexpr generated
+        tag_name: "Half"
+        config:
+          !dbfconfig
+          refid: "half"
 `),
 		},
 	}
