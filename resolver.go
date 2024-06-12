@@ -21,7 +21,7 @@ func ResolverFunc(ctx context.Context, mdb *mongo.Database) debefix.ResolveCallb
 
 // ResolverDBCallback is a db.ResolverDBCallback to generate MongoDB collection records.
 func ResolverDBCallback(ctx context.Context, db *mongo.Database) db.ResolverDBCallback {
-	return func(tableName string, fields map[string]any, returnFieldNames []string) (map[string]any, error) {
+	return func(databaseName, tableName string, fields map[string]any, returnFieldNames []string) (map[string]any, error) {
 		collection := db.Collection(tableName)
 
 		res, err := collection.InsertOne(ctx, fields)
