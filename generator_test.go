@@ -19,16 +19,12 @@ func TestGenerate(t *testing.T) {
     config:
       table_name: "public.tags"
     rows:
-      - _id: !dbfexpr generated
+      - _id: !expr generated
+        _refid: !refid "all"
         tag_name: "All"
-        config:
-          !dbfconfig
-          refid: "all"
-      - _id: !dbfexpr generated
+      - _id: !expr generated
+        _refid: !refid "half"
         tag_name: "Half"
-        config:
-          !dbfconfig
-          refid: "half"
 `),
 		},
 	}

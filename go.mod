@@ -1,9 +1,11 @@
 module github.com/rrgmc/debefix-mongodb
 
-go 1.21.1
+go 1.22
+
+toolchain go1.22.3
 
 require (
-	github.com/rrgmc/debefix v1.1.0
+	github.com/rrgmc/debefix v1.2.0
 	go.mongodb.org/mongo-driver v1.12.1
 	gotest.tools/v3 v3.5.1
 )

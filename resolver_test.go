@@ -19,39 +19,31 @@ func TestResolve(t *testing.T) {
     config:
       table_name: "public.tags"
     rows:
-      - _id: !dbfexpr generated
+      - _id: !expr generated
+        _refid: !refid "all"
         tag_name: "All"
-        config:
-          !dbfconfig
-          refid: "all"
-      - _id: !dbfexpr generated
+      - _id: !expr generated
+        _refid: !refid "half"
         tag_name: "Half"
-        config:
-          !dbfconfig
-          refid: "half"
   posts:
     config:
       table_name: "public.posts"
       depends: ["tags"]
     rows:
-      - _id: !dbfexpr generated
+      - _id: !expr generated
+        _refid: !refid "post_1"
         title: "First post"
-        config:
-          !dbfconfig
-          refid: "post_1"
-      - _id: !dbfexpr generated
+      - _id: !expr generated
+        _refid: !refid "post_2"
         title: "Second post"
-        config:
-          !dbfconfig
-          refid: "post_2"
   post_tags:
     config:
       table_name: "public.post_tags"
     rows:
-      - post_id: !dbfexpr "refid:posts:post_1:_id"
-        tag_id: !dbfexpr "refid:tags:all:_id"
-      - post_id: !dbfexpr "refid:posts:post_2:_id"
-        tag_id: !dbfexpr "refid:tags:half:_id"
+      - post_id: !expr "refid:posts:post_1:_id"
+        tag_id: !expr "refid:tags:all:_id"
+      - post_id: !expr "refid:posts:post_2:_id"
+        tag_id: !expr "refid:tags:half:_id"
 `),
 		},
 	})
