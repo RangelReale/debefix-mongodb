@@ -1,6 +1,10 @@
 # debefix-mongodb
 
-### WARNNG: v1 is deprecated, use v2 instead.
+## Install
+
+```shell
+go get -u github.com/rrgmc/debefix-mongodb/v2
+```
 
 # License
 
