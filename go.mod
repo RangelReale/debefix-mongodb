@@ -1,3 +1,4 @@
+// Deprecated: use github.com/rrgmc/debefix-mongodb/v2 instead.
 module github.com/rrgmc/debefix-mongodb
 
 go 1.22
