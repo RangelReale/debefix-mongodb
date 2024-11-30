@@ -3,8 +3,8 @@ module github.com/rrgmc/debefix-mongodb/v2
 go 1.23
 
 require (
-	github.com/rrgmc/debefix-db/v2 v2.0.1
-	github.com/rrgmc/debefix/v2 v2.0.1
+	github.com/rrgmc/debefix-db/v2 v2.0.2
+	github.com/rrgmc/debefix/v2 v2.0.6
 	go.mongodb.org/mongo-driver v1.12.1
 	gotest.tools/v3 v3.5.1
 )
